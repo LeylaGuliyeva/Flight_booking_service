@@ -3,15 +3,16 @@ package DAO;
 import BASE_CLASSES.Booking;
 import BASE_CLASSES.Flight;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static BASE_CLASSES.User.userBookings;
 
 public class BookingDao implements DAO<Booking> {
 
     static List<Booking> bookings=new ArrayList<>();
+    static File bookingFile=new File("bookingFile");
 
     @Override
     public List<Booking> getAll() {

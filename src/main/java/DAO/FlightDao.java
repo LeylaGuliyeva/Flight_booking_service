@@ -9,6 +9,7 @@ import java.util.Optional;
 
 public class FlightDao implements DAO<Flight>{
     List<Flight> flights=new ArrayList<>();
+    static File flightFile=new File("flightFile");
     @Override
     public void save(Flight flight) {
         int x = flights.indexOf(flight);
@@ -26,15 +27,6 @@ public class FlightDao implements DAO<Flight>{
         }
         else{ return Optional.empty();}}
 
-
-//    public Optional<Flight> load(String series) {
-//        List<Optional<Flight>> c=new ArrayList<>();
-//        flights.stream().map(x->{if(x.getSeries().equals(series)){
-//            c.add(Optional.of(x));}
-//            return c.get(0);
-//        }
-//        return Optional.empty();
-//    }
 
     @Override
     public boolean delete(Flight flight) {
@@ -61,6 +53,11 @@ public class FlightDao implements DAO<Flight>{
         else{
             System.out.println("Flight is not found");
             return false;
+        }
+    }
+    public void decreaseSeat(Flight flight) {
+        for(Flight x:flights){
+            if(x.equals(flight)) x.seats--;
         }
     }
 }

@@ -5,29 +5,47 @@ import DAO.FlightDao;
 import ENUM.Airlines;
 import ENUM.Cities;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static METHODS.DataConverter.dateToString;
 import static METHODS.GenerateFlightDate.generateDate;
 
 public class FlightService {
     static FlightDao flightDAo=new FlightDao();
-    public static List<Flight> generateFlight(int num){
+    public List<Flight> getAll() {
+        return flightDAo.getAll();
+    }
+    public Optional<List<Flight>> compatibleFlights(String destination, String date, int num){
+        List<Flight> p=flightDAo.getAll().stream().filter(x->x.getArrivalCity().toString().equals(destination.toUpperCase())&&x.getSeats()>=num&&date.equals(dateToString(x.getDate()).substring(0,10))).collect(Collectors.toList());
+        if(p.isEmpty()){
+            return Optional.empty();
+        }
+        else{
+            return Optional.of(p);
+        }
+    }
+    public void generateFlight(int num){
         Random s=new Random();
         IntStream.rangeClosed(1,num).forEach(x->{
             Cities cty=Cities.randomCity();
             flightDAo.save(new Flight(cty.getLabel()+String.valueOf(317+x),Cities.KiEV,cty,s.nextInt(50),generateDate(),(s.nextInt(500-150+1)+150), Airlines.randomAirline()));
         });
-
-        return flightDAo.getAll();
     }
-    public static Optional<Flight> findFlight(String series){
+    public Optional<Flight> findFlight(String series){
         Optional<Flight> p= flightDAo.getAll().stream().filter(x->x.getSeries().equals(series)).findFirst();
         if(p.isPresent()){
             return p;
         }
         return Optional.empty();
     }
+    public void decreaseSeat(Flight flight) {
+        flightDAo.decreaseSeat(flight);
+    }
+
+
 }

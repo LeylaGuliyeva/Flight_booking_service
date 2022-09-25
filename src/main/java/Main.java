@@ -6,8 +6,8 @@ import METHODS.GenerateFlightDate;
 
 public class Main {
     public static void main(String arg[]){
-        FlightDao fd=new FlightDao();
-
+        Console console=new Console();
+        console.consoleApplication();
 
     }
 }

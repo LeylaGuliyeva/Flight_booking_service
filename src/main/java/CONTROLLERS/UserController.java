@@ -1,8 +1,21 @@
 package CONTROLLERS;
 
+import BASE_CLASSES.User;
 import SERVICE.UserService;
 
+import java.util.Optional;
+
+
 public class UserController {
-    UserService uservice=new UserService();
+    UserService userService=new UserService();
+    public Optional<User> login(String username,String password){
+        return userService.login(username,password);
+    }
+    public boolean register(String name,String surname,String username,String password){
+        return userService.register(name,surname,username,password);
+    }
+    public Optional<User> getUserByName(String username){
+        return userService.getUserFromName(username);
+    }
 
 }

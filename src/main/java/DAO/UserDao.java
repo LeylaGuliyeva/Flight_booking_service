@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static METHODS.CheckUsernameExistance.checkUsername;
+
 
 public class UserDao implements DAO<User> {
 
@@ -30,8 +30,8 @@ public class UserDao implements DAO<User> {
 
     @Override
     public Optional<User> load(String username) {
-        if(checkUsername(users,username).isPresent()){
-            return checkUsername(users,username);
+        if(checkUsername(username).isPresent()){
+            return checkUsername(username);
         }
         else{ return Optional.empty();}
     }
@@ -48,13 +48,19 @@ public class UserDao implements DAO<User> {
 
     @Override
     public boolean delete(String username) {
-        if(checkUsername(users,username).isPresent()){
-            users.remove(checkUsername(users,username).get());
+        if(checkUsername(username).isPresent()){
+            users.remove(checkUsername(username).get());
             return true;
         }
         else{
             System.out.println("User is not found");
             return false;
-        }
-    }
-}
+        }}
+    public Optional<User> checkUsername(String username){
+            Optional<User> p= users.stream().filter(x->x.getUserName().equals(username)).findFirst();
+            if(p.isPresent()){
+                return p;
+            }
+            else{return p.empty();}
+    }}
+

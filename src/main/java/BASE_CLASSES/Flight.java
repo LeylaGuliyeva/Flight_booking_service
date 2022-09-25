@@ -7,6 +7,8 @@ import org.omg.CORBA_2_3.portable.OutputStream;
 
 import java.util.Date;
 
+import static METHODS.DataConverter.dateToString;
+
 public class Flight implements Identifiable {
     public String series;
     public Cities departureCity;
@@ -51,10 +53,12 @@ public class Flight implements Identifiable {
     @Override
     public String toString() {
         return "Flight{" +
-                "departureCity='" + departureCity + '\'' +
-                ", arrivalCity='" + arrivalCity + '\'' +
+                "series='" + series + '\'' +
+                ", departureCity=" + departureCity +
+                ", arrivalCity=" + arrivalCity +
                 ", seats=" + seats +
                 ", date=" + date +
+                ", price=" + price +
                 ", airline=" + airline +
                 '}';
     }
@@ -97,6 +101,9 @@ public class Flight implements Identifiable {
 
     public void setDepartureCity(Cities departureCity) {
         this.departureCity = departureCity;
+    }
+    public String prettyFormat(){
+        return String.format("%s | %s -> %s | %s | %d $ | %d seats | %s",getSeries().toString(),getDepartureCity().toString(),getArrivalCity().toString(),dateToString(getDate()),getPrice(),getSeats(),getAirline().toString());
     }
 
     @Override

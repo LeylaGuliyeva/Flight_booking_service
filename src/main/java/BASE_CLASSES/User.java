@@ -10,14 +10,12 @@ public class User implements Identifiable {
     public String surname;
     public String userName;
     private String password;
-    public static List<Booking> userBookings;
 
-    public User(String name, String surname, String userName, String password, List<Booking> userBookings) {
+    public User(String name, String surname, String userName, String password) {
         this.name = name;
         this.surname = surname;
         this.userName = userName;
         this.password = password;
-        this.userBookings = userBookings;
     }
 
     @Override
@@ -27,18 +25,7 @@ public class User implements Identifiable {
                 ", surname='" + surname + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
-                ", userBookings=" + userBookings +
                 '}';
-    }
-    public void addBooking(Booking a){
-        this.userBookings.add(a);
-    }
-    public List<Booking> getUserBookings() {
-        return userBookings;
-    }
-
-    public void setUserBookings(List<Booking> userBookings) {
-        this.userBookings = userBookings;
     }
 
     public User() {

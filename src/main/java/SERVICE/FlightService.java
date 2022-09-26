@@ -33,7 +33,7 @@ public class FlightService {
         Random s=new Random();
         IntStream.rangeClosed(1,num).forEach(x->{
             Cities cty=Cities.randomCity();
-            flightDAo.save(new Flight(cty.getLabel()+String.valueOf(317+x),Cities.KiEV,cty,s.nextInt(50),generateDate(),(s.nextInt(500-150+1)+150), Airlines.randomAirline()));
+            flightDAo.save(new Flight(cty.getLabel()+String.valueOf(317+x),Cities.KiEV,cty,(1+s.nextInt(50)),generateDate(),(s.nextInt(500-150+1)+150), Airlines.randomAirline()));
         });
     }
     public Optional<Flight> findFlight(String series){

@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class BookingService {
     BookingDao bookingDao=new BookingDao();
     public int getLastId(){
-        return bookingDao.getAll().size();
+        return bookingDao.getAll().size()+1;
 
     }
     public void makeNewBooking(Booking a){
@@ -24,10 +24,6 @@ public class BookingService {
     }
 
     public List<Booking> myFlights(String name, String surname){
-        System.out.println(name);
-        System.out.println(surname);
-        return bookingDao.getAll().stream().filter(x->x.getUser().getName().equals(name)&&x.getUser().getSurname().equals(surname)).collect(Collectors.toList());
-
-
+        return bookingDao.getAll().stream().filter(x->(x.getUser().getName().equals(name)&&x.getUser().getSurname().equals(surname))||(x.getPassenger().getName().equals(name)&&x.getPassenger().getSurname().equals(surname))).collect(Collectors.toList());
     }
 }

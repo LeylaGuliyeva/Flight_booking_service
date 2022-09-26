@@ -8,7 +8,7 @@ public enum Cities {
     ISTANBUL("IST"),
     ISLAMABAD("ISAB"),
     PARIS("PRS"),
-    ROMA("ROM"),
+    ROME("ROM"),
     NEWYORK("NYK"),
     LONDON("LND"),
     ODESSA("ODE"),

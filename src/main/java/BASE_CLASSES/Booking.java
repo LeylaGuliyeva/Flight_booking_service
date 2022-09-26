@@ -35,7 +35,7 @@ public class Booking implements Identifiable {
                 '}';
     }
     public String prettyFormat(){
-        return String.format( "%d\n%s %s\n%s\n",id,passenger.getName(),passenger.getSurname(),flight.prettyFormat());
+        return String.format( "Booking ID : %d\n%s %s\n%s\n",id,passenger.getName(),passenger.getSurname(),flight.prettyFormat());
     }
     public int getId() {
         return id;

@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cfc17ee-50ad-4474-a5b2-6f6586033d56" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Commands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Files/Bookings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Files/Flights.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Files/Users.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/METHODS/GetFromFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/METHODS/WriteIntoFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Booking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/BookingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/BookingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/BookingDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/FlightDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/FlightDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/METHODS/CheckUsernameExistance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/METHODS/DataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/METHODS/DataConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ENUM/Cities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ENUM/Cities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

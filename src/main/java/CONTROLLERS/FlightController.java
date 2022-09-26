@@ -17,19 +17,25 @@ public class FlightController {
         fService.generateFlight(number);
     }
     public void showFlight(String series){
-        System.out.println(fService.findFlight(series).get().prettyFormat());
+        Optional<Flight> flight=fService.findFlight(series);
+        if(flight.isPresent()){
+            System.out.println(flight.get().prettyFormat());
+        }
+        else{
+            System.out.println("Flight does not exist");
+        }
     }
     public Optional<Flight> flightSelector(String destination, String date, int num){
-        System.out.println("2333");
         Scanner sn=new Scanner(System.in);
         if(fService.compatibleFlights(destination, date, num).isPresent()){
             fService.compatibleFlights(destination, date, num).get().forEach(x->System.out.println(x.prettyFormat()));
-            System.out.println("Please select and enter flight id : ");
+            System.out.println("Please select and enter flight id ( o to main menu ): ");
             String id=sn.next();
-            System.out.println("2453");
-            while(fService.findFlight(id).isPresent()!=true){
-                System.out.println("Please enter valid flight id : ");
-                id=sn.next();
+            if(fService.findFlight(id).isPresent()!=true){
+                if(id.equals("o")==false) {
+                    System.out.println("Flight is not found");
+                }
+                return Optional.empty();
             }
             return (fService.findFlight(id));
         }

@@ -9,13 +9,14 @@ public class Console {
     String str=new String();
     User a=new User();
     Scanner sn=new Scanner(System.in);
+    Scanner scan=new Scanner(System.in);
     public void consoleApplication(){
         commands.generateListFlights(50);
         do{
             if(a.getName()==null){
             commands.displayMainMenuWithoutUser();
             System.out.println("Please enter command : ");
-            String str=sn.next();
+            str=scan.next().toUpperCase();
             switch (str){
                 case "1":
                     System.out.println("Please enter username : ");
@@ -47,8 +48,8 @@ public class Console {
                     System.out.println("Please enter flight id : ");
                     commands.showFlightInfo(sn.next());
                     break;
-                case "exit":
-                case "Exit":
+                case "EXIT":
+
                     break;
                 default:
                     System.out.println("Enter a valid command! (1-9) ");
@@ -56,7 +57,7 @@ public class Console {
             if(a.getName()!=null){
                 commands.displayMainMenuWithUser();
                 System.out.println("Please enter command : ");
-                String str=sn.next();
+                str=scan.next().toUpperCase();
                 switch (str){
                     case "1":
                         commands.onlineBoard();
@@ -79,16 +80,13 @@ public class Console {
                         commands.myFlights(name,surname);
                         break;
                     case "6":
-                        a=null;
+                        a=new User();
                         break;
-                    case "exit":
-                    case "Exit":
+                    case "EXIT":
+
                         break;
                     default:
                         System.out.println("Enter a valid command! (1-9) ");
                         break;}}
-
-        }while(str.equals("exit")!=true||str.equals("Exit")!=true);
-
-
+        }while(str.equals("EXIT")!=true);
     }}

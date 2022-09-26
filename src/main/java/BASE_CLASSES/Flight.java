@@ -28,9 +28,6 @@ public class Flight implements Identifiable {
         this.airline = airline;
     }
 
-    //    public time;
-//    public duration;
-
     public Flight() {
     }
 

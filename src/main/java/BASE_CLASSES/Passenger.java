@@ -1,6 +1,8 @@
 package BASE_CLASSES;
 
-public class Passenger {
+import java.io.Serializable;
+
+public class Passenger implements Serializable {
     public String name;
     public String surname;
     Flight flight;

@@ -5,11 +5,12 @@ import ENUM.Cities;
 import com.sun.corba.se.spi.ior.Identifiable;
 import org.omg.CORBA_2_3.portable.OutputStream;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import static METHODS.DataConverter.dateToString;
 
-public class Flight implements Identifiable {
+public class Flight implements Identifiable, Serializable {
     public String series;
     public Cities departureCity;
     public Cities arrivalCity;

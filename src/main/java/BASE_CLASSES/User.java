@@ -3,9 +3,10 @@ package BASE_CLASSES;
 import com.sun.corba.se.spi.ior.Identifiable;
 import org.omg.CORBA_2_3.portable.OutputStream;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class User implements Identifiable {
+public class User implements Identifiable, Serializable {
     public String name;
     public String surname;
     public String userName;

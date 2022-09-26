@@ -18,6 +18,9 @@ public class UserService {
         flag=true;
         return true;
     }
+    public void writer(){
+        userDao.writer();
+    }
     public Optional<User> getUserFromName(String username){
         return userDao.checkUsername(username);
     }
@@ -29,22 +32,5 @@ public class UserService {
             return Optional.empty();
         }
     }
-//    public static void register(){
-//        User newUser=new User();
-//        Scanner sn=new Scanner(System.in);
-//        System.out.print("Please enter name : ");
-//        newUser.setName(sn.next());
-//        System.out.print("Please enter surname : ");
-//        newUser.setSurname(sn.next());
-//        System.out.print("Please enter username : ");
-//        String usern=sn.next();
-//        while(checkUsername(userDao.getAll(),usern).isPresent()){
-//            System.out.printf("%s already exits, please enter another username : ");
-//            usern=sn.next();
-//        }
-//        newUser.setUserName(usern);
-//        System.out.print("Please enter password : ");
-//        newUser.setPassword(sn.next());
-//    }
 
 }

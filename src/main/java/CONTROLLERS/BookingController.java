@@ -17,6 +17,9 @@ public class BookingController {
             bookingService.makeNewBooking(new Booking(a,bookingService.getLastId(),myFlight,b));}
     public void cancelBooking(String id){
         bookingService.cancelBooking(id);}
+    public void writer(){
+        bookingService.writer();
+    }
     public List<Booking> myFlights(String name, String surname){
         return bookingService.myFlights(name,surname);
     }

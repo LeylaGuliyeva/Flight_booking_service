@@ -3,7 +3,9 @@ package BASE_CLASSES;
 import com.sun.corba.se.spi.ior.Identifiable;
 import org.omg.CORBA_2_3.portable.OutputStream;
 
-public class Booking implements Identifiable {
+import java.io.Serializable;
+
+public class Booking implements Identifiable, Serializable {
     public User user;
     public int id;
     public Flight flight;

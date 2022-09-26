@@ -2,7 +2,10 @@ package DAO;
 
 import BASE_CLASSES.Flight;
 import BASE_CLASSES.User;
+import METHODS.GetFromFile;
+import METHODS.WriteIntoFile;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -10,8 +13,10 @@ import java.util.Optional;
 
 
 public class UserDao implements DAO<User> {
-
-    List<User> users=new ArrayList<>();
+    File userFile=new File("D:\\ABB tech\\Step_project\\src\\main\\java\\Files\\Users.txt");
+    GetFromFile a=new GetFromFile();
+    List<User> users=a.getFromFile(userFile);
+    WriteIntoFile write=new WriteIntoFile();
 
     @Override
     public List<User> getAll() {
@@ -27,7 +32,9 @@ public class UserDao implements DAO<User> {
             users.add(user);
         }
     }
-
+    public void writer(){
+        write.write(userFile,users);
+    }
     @Override
     public Optional<User> load(String username) {
         if(checkUsername(username).isPresent()){

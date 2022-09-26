@@ -9,26 +9,25 @@ import java.util.List;
 import java.util.Optional;
 
 public class GetFromFile<A> implements Identifiable{
-    public Optional<List<A>> getFromFile(File file){
+    public List<A> getFromFile(File file){
+        List<A> a = new ArrayList<>();
         try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(file))){
-            List<A> a = new ArrayList<>();
             try {
                 while(true) {
                     A x=(A) is.readObject();
                     a.add(x);
                 }
             } catch (EOFException e) {
-                return Optional.of(a);
+                return a;
             }
         } catch (FileNotFoundException x) {
             System.out.println("File is not found");
-            return Optional.empty();
+            return a;
         } catch (IOException x) {
-            System.out.println("Error occured");
-            return Optional.empty();
+            return a;
         } catch (ClassNotFoundException e) {
             System.out.println("Class is not found");
-            return Optional.empty();
+            return a;
         }
     }
 

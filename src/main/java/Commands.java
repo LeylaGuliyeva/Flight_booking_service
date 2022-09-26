@@ -63,6 +63,10 @@ public class Commands {
             bookingController.myFlights(name,surname).forEach(x->System.out.println(x.prettyFormat()));
         }
     }
+    public void writerToFile(){
+        flightController.writer();
+        bookingController.writer();
+    }
     public void searchBookFlight(User a){
         Scanner sn=new Scanner(System.in);
         System.out.println("Please add flight destination : ");

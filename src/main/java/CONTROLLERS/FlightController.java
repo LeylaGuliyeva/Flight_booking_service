@@ -16,6 +16,9 @@ public class FlightController {
     public void generateListFlights(int number){
         fService.generateFlight(number);
     }
+    public void writer(){
+        fService.writer();
+    }
     public void showFlight(String series){
         Optional<Flight> flight=fService.findFlight(series);
         if(flight.isPresent()){

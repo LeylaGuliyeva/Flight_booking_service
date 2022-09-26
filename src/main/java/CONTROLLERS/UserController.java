@@ -8,6 +8,9 @@ import java.util.Optional;
 
 public class UserController {
     UserService userService=new UserService();
+    public void writerToFile(){
+        userService.writer();
+    }
     public Optional<User> login(String username,String password){
         return userService.login(username,password);
     }

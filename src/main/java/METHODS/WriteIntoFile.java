@@ -15,7 +15,6 @@ public class WriteIntoFile<A> implements Identifiable {
         for (A x : a) {
                 os.writeObject(x);
             }
-            System.out.println("Saved data successfully");
         } catch (IOException x) {
             System.out.println("Cannot save data");
         }

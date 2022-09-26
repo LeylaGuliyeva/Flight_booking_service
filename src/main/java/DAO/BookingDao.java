@@ -2,6 +2,9 @@ package DAO;
 
 import BASE_CLASSES.Booking;
 import BASE_CLASSES.Flight;
+import BASE_CLASSES.User;
+import METHODS.GetFromFile;
+import METHODS.WriteIntoFile;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -10,9 +13,10 @@ import java.util.Optional;
 
 
 public class BookingDao implements DAO<Booking> {
-
-    static List<Booking> bookings=new ArrayList<>();
-    static File bookingFile=new File("bookingFile");
+    static File bookingFile=new File("D:\\ABB tech\\Step_project\\src\\main\\java\\Files\\Bookings.txt");
+    GetFromFile a=new GetFromFile();
+    List<Booking> bookings=a.getFromFile(bookingFile);
+    WriteIntoFile write=new WriteIntoFile();
 
     @Override
     public List<Booking> getAll() {
@@ -47,7 +51,9 @@ public class BookingDao implements DAO<Booking> {
         else{System.out.println("Booking is not found");
             return false;}
     }
-
+    public void writer(){
+        write.write(bookingFile,bookings);
+    }
     @Override
     public boolean delete(String id) {
         int a=Integer.parseInt(id);

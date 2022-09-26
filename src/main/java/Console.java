@@ -1,5 +1,6 @@
 import BASE_CLASSES.User;
 import CONTROLLERS.UserController;
+import METHODS.WriteIntoFile;
 
 import java.util.Scanner;
 
@@ -49,7 +50,8 @@ public class Console {
                     commands.showFlightInfo(sn.next());
                     break;
                 case "EXIT":
-
+                    userController.writerToFile();
+                    commands.writerToFile();
                     break;
                 default:
                     System.out.println("Enter a valid command! (1-9) ");
@@ -83,7 +85,8 @@ public class Console {
                         a=new User();
                         break;
                     case "EXIT":
-
+                        userController.writerToFile();
+                        commands.writerToFile();
                         break;
                     default:
                         System.out.println("Enter a valid command! (1-9) ");

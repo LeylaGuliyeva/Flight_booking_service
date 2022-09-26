@@ -29,6 +29,9 @@ public class FlightService {
             return Optional.of(p);
         }
     }
+    public void writer(){
+        flightDAo.writer();
+    }
     public void generateFlight(int num){
         Random s=new Random();
         IntStream.rangeClosed(1,num).forEach(x->{

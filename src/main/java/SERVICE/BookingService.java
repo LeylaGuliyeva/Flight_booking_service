@@ -12,6 +12,9 @@ import java.util.stream.Collectors;
 
 public class BookingService {
     BookingDao bookingDao=new BookingDao();
+    public void writer(){
+        bookingDao.writer();
+    }
     public int getLastId(){
         return bookingDao.getAll().size()+1;
 

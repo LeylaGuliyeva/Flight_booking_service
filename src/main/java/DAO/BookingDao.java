@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+import Exception.UnacceptableInputError;
 
 public class BookingDao implements DAO<Booking> {
     static File bookingFile=new File("D:\\ABB tech\\Step_project\\src\\main\\java\\Files\\Bookings.txt");
@@ -43,28 +43,34 @@ public class BookingDao implements DAO<Booking> {
     }
 
     @Override
-    public boolean delete(Booking booking) {
-        if(bookings.contains(booking)){
+    public boolean delete(Booking booking) throws UnacceptableInputError {
+        try{if(bookings.contains(booking)){
             bookings.remove(booking);
             return true;
         }
-        else{System.out.println("Booking is not found");
-            return false;}
-    }
-    public void writer(){
+        else{ throw new UnacceptableInputError();
+    }} catch (UnacceptableInputError e) {
+            System.out.println("Booking does not exist");
+            return false;
+        }}
+
+        public void writer(){
         write.write(bookingFile,bookings);
     }
     @Override
-    public boolean delete(String id) {
+    public boolean delete(String id) throws UnacceptableInputError {
         int a=Integer.parseInt(id);
         Optional<Booking> p= bookings.stream().filter(x->x.getId()==a).findFirst();
-        if(p.isPresent()){
+        try{if(p.isPresent()){
             bookings.remove(p.get());
             return true;
         }
         else{
-            System.out.println("Booking is not found");
+            throw new UnacceptableInputError();
+        }}
+        catch (UnacceptableInputError e) {
+            System.out.println("Booking does not exist");
             return false;
-        }
+        }}
     }
-}
+

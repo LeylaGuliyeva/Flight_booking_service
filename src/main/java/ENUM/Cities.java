@@ -1,7 +1,5 @@
 package ENUM;
-
 import java.util.Random;
-
 public enum Cities {
     KiEV("KV"),
     BAKU("BK"),

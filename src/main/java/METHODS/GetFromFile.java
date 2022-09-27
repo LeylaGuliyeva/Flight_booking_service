@@ -30,7 +30,6 @@ public class GetFromFile<A> implements Identifiable{
             return a;
         }
     }
-
     @Override
     public int getId() {
         return 0;

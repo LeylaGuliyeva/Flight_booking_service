@@ -18,6 +18,9 @@ public class UserService {
         flag=true;
         return true;
     }
+    public Optional<User> checkUsername(String username){
+        return userDao.checkUsername(username);
+    }
     public void writer(){
         userDao.writer();
     }

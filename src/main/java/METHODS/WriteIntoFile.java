@@ -19,7 +19,6 @@ public class WriteIntoFile<A> implements Identifiable {
             System.out.println("Cannot save data");
         }
     }
-
     @Override
     public int getId() {
         return 0;

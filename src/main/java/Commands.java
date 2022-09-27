@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
+import static METHODS.DataConverter.within24Hours;
+import Exception.UnacceptableInputError;
+
 public class Commands {
     BookingController bookingController=new BookingController();
     FlightController flightController=new FlightController();
@@ -46,13 +49,13 @@ public class Commands {
         flightController.generateListFlights(number);
     }
     public void onlineBoard(){
-        flightController.getAll().stream().forEach(x->System.out.println(x.prettyFormat()));
+        flightController.getAll().stream().forEach(x->{if(within24Hours(x))System.out.println(x.prettyFormat());});
         System.out.println();
     }
-    public void showFlightInfo(String id){
+    public void showFlightInfo(String id) throws UnacceptableInputError {
         flightController.showFlight(id);
     }
-    public void cancelBooking(String id){
+    public void cancelBooking(String id) throws UnacceptableInputError {
         bookingController.cancelBooking(id);
     }
     public void myFlights(String name,String surname){

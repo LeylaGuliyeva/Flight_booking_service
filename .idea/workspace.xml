@@ -5,28 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cfc17ee-50ad-4474-a5b2-6f6586033d56" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/UnacceptableInputError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/BookingControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/BookingDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/BookingServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/FlightControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/FlightDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/FlightServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/UserDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TESTS/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/BookingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/BookingDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ENUM/Cities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ENUM/Cities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Files/Bookings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Files/Bookings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Files/Flights.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Files/Flights.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Files/Users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Files/Users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/METHODS/DataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/METHODS/DataConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/METHODS/GetFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/METHODS/GetFromFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/METHODS/WriteIntoFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/METHODS/WriteIntoFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,17 +61,93 @@
       <recent name="DAO" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="JUnit.BookingDaoTest.deleteTest2">
+    <configuration name="BookingDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.BookingDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingDaoTest.deleteTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.BookingDaoTest" />
+      <option name="METHOD_NAME" value="deleteTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingDaoTest.loadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.BookingDaoTest" />
+      <option name="METHOD_NAME" value="loadTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightDaoTest.decreaseSeatTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.FlightDaoTest" />
+      <option name="METHOD_NAME" value="decreaseSeatTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightDaoTest.loadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.FlightDaoTest" />
+      <option name="METHOD_NAME" value="loadTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.BookingDaoTest.deleteTest2" />
+        <item itemvalue="JUnit.BookingDaoTest.loadTest" />
+        <item itemvalue="JUnit.BookingDaoTest" />
+        <item itemvalue="JUnit.FlightDaoTest.decreaseSeatTest" />
+        <item itemvalue="JUnit.FlightDaoTest.loadTest" />
       </list>
     </recent_temporary>
   </component>

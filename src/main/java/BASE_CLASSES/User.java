@@ -5,11 +5,26 @@ import org.omg.CORBA_2_3.portable.OutputStream;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 public class User implements Identifiable, Serializable {
     public String name;
     public String surname;
     public String userName;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && Objects.equals(userName, user.userName) && Objects.equals(password, user.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, userName, password);
+    }
+
     private String password;
 
     public User(String name, String surname, String userName, String password) {

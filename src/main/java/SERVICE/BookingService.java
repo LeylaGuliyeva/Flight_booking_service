@@ -19,6 +19,15 @@ public class BookingService {
     public int getLastId(){
         return bookingDao.getAll().size()+1;
     }
+
+    public BookingDao getBookingDao() {
+        return bookingDao;
+    }
+
+    public void setBookingDao(BookingDao bookingDao) {
+        this.bookingDao = bookingDao;
+    }
+
     public void makeNewBooking(Booking a){
         bookingDao.save(a);
         }

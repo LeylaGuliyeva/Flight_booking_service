@@ -18,6 +18,18 @@ public class UserService {
         flag=true;
         return true;
     }
+
+    public static UserDao getUserDao() {
+        return userDao;
+    }
+
+    public static void setUserDao(UserDao userDao) {
+        UserService.userDao = userDao;
+    }
+
+    public void save(User u) {
+        userDao.save(u);
+    }
     public Optional<User> checkUsername(String username){
         return userDao.checkUsername(username);
     }

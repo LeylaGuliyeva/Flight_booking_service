@@ -43,6 +43,15 @@ public class FlightService {
             flightDAo.save(new Flight(cty.getLabel()+String.valueOf(317+x),Cities.KiEV,cty,(1+s.nextInt(50)),generateDate(),(s.nextInt(500-150+1)+150), Airlines.randomAirline()));
         });
     }
+
+    public FlightDao getFlightDAo() {
+        return flightDAo;
+    }
+
+    public void setFlightDAo(FlightDao flightDAo) {
+        FlightService.flightDAo = flightDAo;
+    }
+
     public Optional<Flight> findFlight(String series){
         Optional<Flight> p= flightDAo.getAll().stream().filter(x->x.getSeries().equals(series)).findFirst();
         if(p.isPresent()){

@@ -20,6 +20,15 @@ public class UserController {
     public boolean register(String name,String surname,String username,String password){
         return userService.register(name,surname,username,password);
     }
+
+    public UserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
     public Optional<User> getUserByName(String username){
         return userService.getUserFromName(username);
     }

@@ -27,7 +27,15 @@ public class BookingController {
         return bookingService.getLastId();
 
     }
-        }
+
+    public BookingService getBookingService() {
+        return bookingService;
+    }
+
+    public void setBookingService(BookingService bookingService) {
+        this.bookingService = bookingService;
+    }
+}
 
 
 

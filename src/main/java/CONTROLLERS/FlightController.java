@@ -34,7 +34,16 @@ public class FlightController {
         catch (UnacceptableInputError e) {
             System.out.println("Flight id is not valid!");
         }}
-        public Optional<Flight> flightSelector(String destination, String date, int num){
+
+    public static FlightService getfService() {
+        return fService;
+    }
+
+    public static void setfService(FlightService fService) {
+        FlightController.fService = fService;
+    }
+
+    public Optional<Flight> flightSelector(String destination, String date, int num){
         Scanner sn=new Scanner(System.in);
         if(fService.compatibleFlights(destination, date, num).isPresent()){
             fService.compatibleFlights(destination, date, num).get().forEach(x->System.out.println(x.prettyFormat()));

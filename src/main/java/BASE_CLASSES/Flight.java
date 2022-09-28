@@ -7,6 +7,7 @@ import org.omg.CORBA_2_3.portable.OutputStream;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 import static METHODS.DataConverter.dateToString;
 
@@ -111,5 +112,18 @@ public class Flight implements Identifiable, Serializable {
     @Override
     public int getId() {
         return 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Flight flight = (Flight) o;
+        return seats == flight.seats && price == flight.price && series.equals(flight.series) && departureCity == flight.departureCity && arrivalCity == flight.arrivalCity && date.equals(flight.date) && airline == flight.airline;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(series, departureCity, arrivalCity, seats, date, price, airline);
     }
 }

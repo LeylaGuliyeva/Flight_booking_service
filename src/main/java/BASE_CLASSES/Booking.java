@@ -4,6 +4,7 @@ import com.sun.corba.se.spi.ior.Identifiable;
 import org.omg.CORBA_2_3.portable.OutputStream;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Booking implements Identifiable, Serializable {
     public User user;
@@ -66,5 +67,18 @@ public class Booking implements Identifiable, Serializable {
     @Override
     public void write(OutputStream arg0) {
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Booking booking = (Booking) o;
+        return id == booking.id && user.equals(booking.user) && flight.equals(booking.flight) && passenger.equals(booking.passenger);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(user, id, flight, passenger);
     }
 }

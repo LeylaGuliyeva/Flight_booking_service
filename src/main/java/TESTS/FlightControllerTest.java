@@ -13,14 +13,22 @@ import static junit.framework.TestCase.assertTrue;
 
 public class FlightControllerTest {
     FlightController fc=new FlightController();
+    FlightService fs=new FlightService();
+    FlightDao fd=new FlightDao();
     @Test
-    public void flightSelectorTest(){
-        Flight u=new Flight("AZE34", Cities.KiEV, Cities.BAKU,23,generateDate(),300, Airlines.PEGASUS);
-        FlightService fs=new FlightService();
-        FlightDao fd=new FlightDao();
-        fd.save(u);
+    public void getAllTest(){
         fs.setFlightDAo(fd);
         fc.setfService(fs);
-        assertTrue(fc.flightSelector("Baku","2022/09/28",1).get().equals(u)||fc.flightSelector("Baku","2022/09/29",1).get().equals(u));
+        Flight u=new Flight("AZE34", Cities.KiEV, Cities.BAKU,23,generateDate(),300, Airlines.PEGASUS);
+        fd.save(u);
+        assertTrue(fc.getAll().get(0).equals(u)&&fc.getAll().size()==1);
+    }
+    @Test
+    public void generateListFlightsTest(){
+        fs.setFlightDAo(fd);
+        fc.setfService(fs);
+        assertTrue(fd.getAll().size()==0);
+        fc.generateListFlights(10);
+        assertTrue(fd.getAll().size()==10);
     }
 }

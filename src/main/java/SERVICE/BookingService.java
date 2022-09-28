@@ -19,7 +19,6 @@ public class BookingService {
     public int getLastId(){
         return bookingDao.getAll().size()+1;
     }
-
     public BookingDao getBookingDao() {
         return bookingDao;
     }

@@ -7,8 +7,7 @@ import ENUM.Cities;
 import SERVICE.FlightService;
 import org.junit.Test;
 
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
 
 import static METHODS.GenerateFlightDate.generateDate;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -28,6 +27,15 @@ public class FlightServiceTest {
         Flight u=new Flight("AZE34", Cities.KiEV, Cities.BAKU,23,generateDate(),300, Airlines.PEGASUS);
         fd.save(u);
         fs.setFlightDAo(fd);
-        assertTrue(fs.compatibleFlights("BAKU", "2022/09/28", 1).get().contains(u)||fs.compatibleFlights("BAKU", "2022/09/29", 1).get().contains(u));
+        Optional<List<Flight>> s=fs.compatibleFlights("BAKU", "2022/09/28", 1);
+        Optional<List<Flight>> s2=fs.compatibleFlights("BAKU", "2022/09/29", 1);
+        List<Flight> myList=new ArrayList<>();
+        if(s2.isPresent()){
+            s2.get().forEach(x->myList.add(x));
+        }
+        if(s.isPresent()){
+            s.get().forEach(x->myList.add(x));
+        }
+        assertTrue(myList.contains(u));
     }
 }

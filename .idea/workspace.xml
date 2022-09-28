@@ -6,20 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9cfc17ee-50ad-4474-a5b2-6f6586033d56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BASE_CLASSES/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTROLLERS/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CONTROLLERS/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SERVICE/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SERVICE/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TESTS/BookingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TESTS/BookingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TESTS/BookingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TESTS/BookingServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TESTS/FlightControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TESTS/FlightControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TESTS/FlightServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TESTS/FlightServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TESTS/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TESTS/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TESTS/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TESTS/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +55,70 @@
       <recent name="DAO" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FlightServiceTest.compatibleFlightsTest">
-    <configuration name="FlightControllerTest.flightSelectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FlightControllerTest">
+    <configuration name="BookingControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.BookingControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingControllerTest.getLastIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.BookingControllerTest" />
+      <option name="METHOD_NAME" value="getLastIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingControllerTest.makeNewBookingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.BookingControllerTest" />
+      <option name="METHOD_NAME" value="makeNewBookingTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Step_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TESTS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TESTS" />
+      <option name="MAIN_CLASS_NAME" value="TESTS.BookingServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Step_project" />
       <extension name="coverage">
         <pattern>
@@ -75,82 +128,18 @@
       </extension>
       <option name="PACKAGE_NAME" value="TESTS" />
       <option name="MAIN_CLASS_NAME" value="TESTS.FlightControllerTest" />
-      <option name="METHOD_NAME" value="flightSelectorTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlightServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Step_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TESTS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TESTS" />
-      <option name="MAIN_CLASS_NAME" value="TESTS.FlightServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlightServiceTest.compatibleFlightsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Step_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TESTS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TESTS" />
-      <option name="MAIN_CLASS_NAME" value="TESTS.FlightServiceTest" />
-      <option name="METHOD_NAME" value="compatibleFlightsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlightServiceTest.findFlightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Step_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TESTS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TESTS" />
-      <option name="MAIN_CLASS_NAME" value="TESTS.FlightServiceTest" />
-      <option name="METHOD_NAME" value="findFlightTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.getUserByNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Step_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TESTS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TESTS" />
-      <option name="MAIN_CLASS_NAME" value="TESTS.UserControllerTest" />
-      <option name="METHOD_NAME" value="getUserByNameTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FlightServiceTest.compatibleFlightsTest" />
-        <item itemvalue="JUnit.FlightControllerTest.flightSelectorTest" />
-        <item itemvalue="JUnit.FlightServiceTest" />
-        <item itemvalue="JUnit.FlightServiceTest.findFlightTest" />
-        <item itemvalue="JUnit.UserControllerTest.getUserByNameTest" />
+        <item itemvalue="JUnit.FlightControllerTest" />
+        <item itemvalue="JUnit.BookingControllerTest.getLastIdTest" />
+        <item itemvalue="JUnit.BookingControllerTest" />
+        <item itemvalue="JUnit.BookingControllerTest.makeNewBookingTest" />
+        <item itemvalue="JUnit.BookingServiceTest" />
       </list>
     </recent_temporary>
   </component>
